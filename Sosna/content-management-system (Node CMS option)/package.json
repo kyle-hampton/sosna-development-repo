@@ -1,0 +1,19 @@
+{
+  "name": "content-management-system",
+  "version": "1.0.0",
+  "description": "this is the content management section of the application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kyle hampton",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mapbox-gl": "^0.52.0",
+    "mongo-uri": "^0.1.2",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^5.4.6"
+  }
+}

@@ -1,0 +1,266 @@
+/*
+Theme Name: sosna-theme
+Theme URI: ...
+Description: this is the wordpress theme for sosna
+Version: 1.0
+Author: draft_studios
+Author URI: https://www.codedbykids.com/programs/
+*/
+
+body{
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
+}
+
+/* page wrapper */
+#main-wrapper {
+  display: flex;
+  width: 100%;
+  height: 97vh;
+  /* border: 2px black solid; */
+}
+
+/* main section */
+#main-border{
+  flex-direction: row;
+  width: 81%;
+  height: 93%;
+  /* border: 2px red solid; */
+}
+        #searchbar-section{
+          width: 100%;
+          height: 13vh;
+          /* border: 2px green solid; */
+        }
+
+            .search{
+              width: 100%;
+              height: 11vh;
+              border: 2px solid;
+              border-radius: 4px;
+              background-color: #880800;
+              display: flex;
+              margin: 0 auto;
+              box-shadow: 0px 2px 7px #333333;
+            }
+            .search-bar{
+              width: 65%;
+              height: 6vh;
+              background-color: white;
+              border: 4px solid;
+              border-radius: 5px;
+              margin: 1.5% auto;
+              margin-right: 0%;
+              opacity: .8;
+              box-shadow: 0px 2px 7px #333333;
+            }
+            #search-input{
+              width: 97%;
+              height: 5.5vh;
+              font-size: 18px;
+              border: transparent;
+              top: 10px auto;
+              text-align: left;
+              padding-left: 15px;
+              font-style: italic;
+              font-family: 'Raleway', sans-serif;
+              color: #333333;
+            }
+            .search-button{
+              flex-direction: row;
+              width: 13%;
+              height: 4.5vh;
+              border: 4px black solid;
+              margin: 2.5% auto;
+              margin-left: 10px;
+              background-color: #333333;
+              border-radius: 5px;
+              color: white;
+              font-size: 20px;
+              box-shadow: 0px 2px 7px #333333;
+              font-family: 'Raleway', sans-serif;
+            }
+
+      #main-activity-section{
+        width: 100%;
+        height: 80vh;
+        /* border: 2px green solid; */
+      }
+      .background-main{
+        width: 100%;
+        height: 80vh;
+        background-image: url('./assets/phila-alley.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: .6;
+
+      }
+            .main-content-wrapper{
+              width: 85%;
+              height: 98%;
+              /* border: 2px blue solid; */
+              margin: 3px auto;
+              position: relative;
+              top: -80vh;
+            }
+            /* text prompt */
+            .prompt{
+              position: relative;
+              top: -7.5vh;
+              text-align: center;
+              margin: 0 auto;
+              font-size: 150%;
+
+            }
+            /* background container */
+            .catagory-prompt{
+              width: 50%;
+              height: 10%;
+              border: 2px solid #880800;
+              background-color: white;
+              border-radius: 7px;
+              margin: 0 auto;
+              margin-bottom: 10px;
+              text-align: center;
+              opacity: .8;
+              box-shadow: 0px 2px 7px #333333;
+              padding-bottom: 0;
+            }
+            .wpbdp-categories cf{
+              position: relative;
+              top: -4vh;
+              width: 100%;
+              height: 70px;
+              display: flex;
+              font-family: 'Raleway', sans-serif;
+            }
+            .cat-item{
+              width: 100%;
+              height: 65px;
+              flex-direction: column;
+              border: 4px solid white;
+              list-style-type: none;
+              background-color: #880800;
+              color: white;
+              text-align: center;
+              font-family: 'Raleway', sans-serif;
+              margin: 5px;
+              font-size: 22px;
+              line-height: 1.63;
+            }
+            .decription-box{
+              width: 100%;
+              height: 65px;
+              flex-direction: column;
+              list-style-type: none;
+              background-color: #ffff;
+              opacity: .9;
+              text-align: center;
+            }
+            .category-label{
+              text-decoration: none;
+              color: white;
+            }
+            ul.wpbdp-categories.cf{
+              padding: 0;
+              margin: -30px;
+            }
+            .business-categories{
+              display: flex;
+              margin: 0 auto;
+            }
+            .link-column{
+              flex-direction: row;
+            }
+            .description-box{
+              padding: 0;
+              margin: -30px;
+            }
+
+
+
+
+/* divder */
+#divder{
+  flex-direction: row;
+  width: .01%;
+  height: 90vh;
+  background-color: black;
+  border: 1px solid;
+  margin: 10px;
+  padding-top: 2.5%;
+
+}
+
+
+/* sidebar */
+#side-border{
+  width: 16%;
+  /* border: 2px green solid; */
+}
+
+#branding-section{
+  width: 100%;
+  height: 30vh;
+  margin: auto;
+  /* border: 2px purple solid; */
+}
+      .directory{
+        margin: 0 auto;
+      }
+
+      #sidebar-elements{
+        width: 100%;
+        height: 15vh;
+        /* border: 2px red solid; */
+        text-align: center;
+        font-size: 80%;
+      }
+
+      #text-edit{
+        height: 8vh;
+      }
+
+      .logo{
+        width: 80%;
+        height: 50vh;
+        background-image: url('./assets/sosna-logo.png');
+        background-size: 100% 15%;
+        background-repeat: no-repeat;
+        margin: 16% auto;
+        margin-right: 4%;
+      }
+
+      #directory-text{
+        font-size: 15px;
+        margin: 8px auto;
+        color: #333333;
+        font-weight: bold;
+      }
+      .text-wrapper{
+        font-size: 14px;
+        margin: 10px auto;
+        padding-left: 8%;
+      }
+
+#link-section{
+  width: 100%;
+  height: 15vh;
+  color: #333333;
+  text-decoration: underline;
+
+  /* border: 2px blue solid; */
+}
+#addition-link-section{
+  width: 100%;
+  height: 30vh;
+  color: #333333;
+  /* border: 2px blue solid; */
+}
+
+.sidebar-divider{
+  margin: 10px auto;
+  width: 95%;
+  border: 1px #333333 solid;
+
+}

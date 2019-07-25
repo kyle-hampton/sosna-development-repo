@@ -49,10 +49,7 @@
   </div>
 </div>
 
-</div>
+
 
 <div class="box-row separator"></div>
 <?php endif; ?>
-
-
-</div>

@@ -1,10 +1,3 @@
-<!-- main activity section -->
-<div id="main-activity-section" class="main-activity-section">
-
-<!-- background -->
-<div class="background-main">
-
-</div>
 
 <h2 class="category-name">
     <?php echo esc_html( $category->name ); ?>

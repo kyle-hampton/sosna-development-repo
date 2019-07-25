@@ -30,17 +30,10 @@
         <!-- link section -->
         <div id="link-section" class="link-section">
 
-          <?php $main_links = wpbdp_main_links(); ?>
-          <?php if ( $main_links ) : ?>
-          <a href="#"> <h4><?php echo $main_links; ?></h4> </a>
-          <?php endif; ?>
-
-
-
           <div class="text-wrapper">
-            <!-- <a href="#"> <h4>FIND A BUSSINESS / ORGANIZATION</h4> </a>
-            <a href="#"> <h4>SEARCH BY ACTIVITY</h4> </a>
-            <a href="#"> <h4>VIEW FULL MAP</h4> </a> -->
+            <a href="/business-directory?wpbdp_view=all_listings"> <h4 id="page-link">FIND A BUSSINESS / ORGANIZATION</h4> </a>
+            <a href="/business-directory"> <h4 id="page-link">SEARCH BY ACTIVITY</h4> </a>
+            <a href="#"> <h4 id="page-link">VIEW FULL MAP</h4> </a>
           </div>
         </div>
 
@@ -54,16 +47,16 @@
 
           <div class="text-wrapper">
             <div class="">
-              <h4>About</h4>
+              <a id="sidebar-links" href="https://www.southofsouth.org/about"><h4>About</h4></a>
             </div>
             <div class="">
-              <h4>Sponsor</h4>
+              <a id="sidebar-links" href="https://www.southofsouth.org/sponsors"><h4>Sponsor</h4></a>
             </div>
             <div class="">
-              <h4>Advertising</h4>
+              <a id="sidebar-links" href="https://www.southofsouth.org/copy-of-contact"><h4>Advertising</h4></a> 
             </div>
             <div class="">
-              <h4>Add Bussiness</h4>
+              <a id="sidebar-links" href="#"><h4>Add Bussiness</h4></a>
             </div>
           </div>
 

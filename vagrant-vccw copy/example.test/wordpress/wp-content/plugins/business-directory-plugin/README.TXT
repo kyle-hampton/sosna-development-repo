@@ -2,11 +2,11 @@
 Contributors: businessdirectoryplugin
 Donate link: https://businessdirectoryplugin.com/premium-modules/
 Tags: business directory, listings, directory plugin, company business directory, chamber of commerce business directory, church directory, address book, contact directory, local business directory, listings directory, link directory, member directory, staff directory
-Requires at least: 4.7
+Requires at least: 4.8
 Requires PHP: 5.6
 Tested up to: 5.2
-Last Updated: 2019-May-30
-Stable tag: 5.5.7
+Last Updated: 2019-Jul-24
+Stable tag: 5.5.8
 License: GPLv2 or later
 
 Build any kind of local listings directory, directory of business providers, a Yellow-Pages business directory, Yelp-like review directory, property listings and much more!  Make your listings sing with Business Directory Plugin.
@@ -145,6 +145,24 @@ If you are having problems please visit [support forum](http://www.businessdirec
 
 
 == Changelog ==
+
+= Version 5.5.7 =
+* Make BD ADA compliant. 
+* Include "Created Date" and "Modified Date" support for Listings CSV Export. 
+* Hide required symbol and field description inside widgets
+* Fix quick search integration with BD modules. 
+* Add compatibility with Cornerstone Page Builder Plugin. 
+* Preserve WP permalink structure for Directory URLs. 
+* Style receipt printing in checkout pages. 
+* Validate field existence before calling method. 
+* Update Italian translations. 
+* ADD Compatibility for Beaver Themer. 
+* Add "wpbdp_supported_post_types" filter to maybe include CPTs as supported post types for shortcodes. 
+* Upgrade jQuery-File-Upload library version to 9.32.0. 
+* Fix access key login redirection. 
+* Fix renewals login authentication parameters.
+* Update German translations. 
+* Sanitize URL attribute on listings sort links preventing XSS attacks. 
 
 = Version 5.5.7 =
 * Validate image size before setting listing thumbnail image.

@@ -326,6 +326,7 @@ function wpbdp_search_form() {
         $html .= sprintf( '<input type="hidden" name="page_id" value="%d" />', wpbdp_get_page_id( 'main' ) );
     }
 
+    $html .= '<label for="wpbdp-keyword-field" style="display:none;">Keywords:</label>';
     $html .= '<input type="hidden" name="dosrch" value="1" />';
     $html .= '<input id="intextbox" maxlength="150" name="q" size="20" type="text" value="" />';
     $html .= sprintf(
@@ -379,7 +380,7 @@ function wpbdp_listing_sort_options() {
             '<span class="%s %s"><a href="%s" title="%s">%s</a> %s</span>',
             $id,
             ( $current_sort && $current_sort->option == $id ) ? 'current' : '',
-            esc_url( ( $current_sort && $current_sort->option == $id ) ? add_query_arg( 'wpbdp_sort', ( $current_sort->order == 'ASC' ? '-' : '' ) . $id ) : add_query_arg( 'wpbdp_sort', ( $default_order == 'DESC' ? '-' : '' ) . $id ) ),
+            esc_attr( ( $current_sort && $current_sort->option == $id ) ? add_query_arg( 'wpbdp_sort', ( $current_sort->order == 'ASC' ? '-' : '' ) . $id ) : add_query_arg( 'wpbdp_sort', ( $default_order == 'DESC' ? '-' : '' ) . $id ) ),
             isset( $option[1] ) && ! empty( $option[1] ) ? esc_attr( $option[1] ) : esc_attr( $option[0] ),
             $option[0],
             ( $current_sort && $current_sort->option == $id ) ? ( $current_sort->order == 'ASC' ? '↑' : '↓' ) : ( $default_order == 'DESC' ? '↓' : '↑' )
@@ -390,13 +391,18 @@ function wpbdp_listing_sort_options() {
     $html .= '<br />';
 
     if ( $current_sort ) {
-        $html .= sprintf( '(<a href="%s" class="reset">%s</a>)', remove_query_arg( 'wpbdp_sort' ), _x( 'Reset', 'sort', 'WPBDM' ) );
+        $html .= sprintf(
+            '(<a href="%s" class="reset">%s</a>)',
+            esc_attr( remove_query_arg( 'wpbdp_sort' ) ),
+            _x( 'Reset', 'sort', 'WPBDM' )
+        );
     }
     $html .= '</div>';
 
     $html .= '<div class="wpbdp-listings-sort-options wpbdp-show-on-mobile">';
 
-    $html .= '<select class="">';
+    $html .= '<label for="wpbdp-sort-bar" style="display:none;">Sort By:</label>';
+    $html .= '<select id="wpbdp-sort-bar" class="">';
     $html .= '<option value="0" class="header-option">' . _x( 'Sort By:', 'templates sort', 'WPBDM' ) . '</option>';
 
     foreach ( $sort_options as $id => $option ) {
@@ -404,7 +410,7 @@ function wpbdp_listing_sort_options() {
 
         $html .= sprintf(
             '<option value="%s" %s>%s%s %s</option>',
-            esc_url( ( $current_sort && $current_sort->option == $id ) ? add_query_arg( 'wpbdp_sort', ( $current_sort->order == 'ASC' ? '-' : '' ) . $id ) : add_query_arg( 'wpbdp_sort', ( $default_order == 'DESC' ? '-' : '' ) . $id ) ),
+            esc_attr( ( $current_sort && $current_sort->option == $id ) ? add_query_arg( 'wpbdp_sort', ( $current_sort->order == 'ASC' ? '-' : '' ) . $id ) : add_query_arg( 'wpbdp_sort', ( $default_order == 'DESC' ? '-' : '' ) . $id ) ),
             ( $current_sort && $current_sort->option == $id ) ? 'selected="selected"' : '',
             str_repeat( '&nbsp;', 3 ),
             $option[0],
@@ -415,7 +421,7 @@ function wpbdp_listing_sort_options() {
     if ( $current_sort ) {
         $html .= sprintf(
             '<option value="%s" class="header-option">%s</option>',
-            remove_query_arg( 'wpbdp_sort' ),
+            esc_attr( remove_query_arg( 'wpbdp_sort' ) ),
             _x( '(Reset)', 'sort', 'WPBDM' )
         );
     }

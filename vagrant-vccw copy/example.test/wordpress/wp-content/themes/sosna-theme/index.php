@@ -3,7 +3,7 @@
 <?php get_sidebar(); ?>
 <!-- main section -->
       <div id="main-border" class="main-section">
-
+        
         <div class="business-catagories">
         <!-- wordpress loop -->
         <?php if ( have_posts() ) : ?>

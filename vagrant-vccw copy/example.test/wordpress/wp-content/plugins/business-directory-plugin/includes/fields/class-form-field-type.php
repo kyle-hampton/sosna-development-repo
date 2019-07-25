@@ -232,13 +232,13 @@ class WPBDP_Form_Field_Type {
                 $html .= '<div class="wpbdp-form-field-label">';
                 $html .= sprintf( '<label for="%s">%s</label>', 'wpbdp-field-' . $field->get_id(), apply_filters( 'wpbdp_render_field_label', $field->get_label(), $field ) );
 
-                if ( $field->has_validator( 'required' ) )
+                if ( $field->has_validator( 'required' ) && 'widget' !== $render_context  )
                     $html .= '<span class="wpbdp-form-field-required-indicator">*</span>';
 
                 $html .= '</div>';
 
                 $field_description = trim( apply_filters( 'wpbdp_render_field_description', $field->get_description(), $field ) );
-                if ( $field_description )
+                if ( $field_description && 'widget' !== $render_context )
                     $html .= '<div class="wpbdp-form-field-description">' . $field_description .'</div>';
 
                 $html .= '<div class="wpbdp-form-field-html wpbdp-form-field-inner">';
@@ -371,7 +371,7 @@ class WPBDP_Form_Field_Type {
         $html .= '<div class="' . $css_classes . ' ' . $extra_classes . '" ' . $tag_attrs . '>';
 
         if ( $label )
-            $html .= '<label>' . esc_html( apply_filters( 'wpbdp_display_field_label', $label, $labelorfield ) ) . ':</label> ';
+            $html .= '<span class="field-label">' . esc_html( apply_filters( 'wpbdp_display_field_label', $label, $labelorfield ) ) . ':</span> ';
 
         if ( $content )
             $html .= '<span class="value">' . $content . '</span>';

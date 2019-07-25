@@ -19,7 +19,7 @@ final class WPBDP {
     }
 
     private function setup_constants() {
-        define( 'WPBDP_VERSION', '5.5.7' );
+    define( 'WPBDP_VERSION', '5.5.8' );
 
         define( 'WPBDP_PATH', wp_normalize_path( plugin_dir_path( WPBDP_PLUGIN_FILE ) ) );
         define( 'WPBDP_INC', trailingslashit( WPBDP_PATH . 'includes' ) );
@@ -270,9 +270,9 @@ final class WPBDP {
 
         global $post;
 
-        if ( $post && ( 'page' == $post->post_type || 'post' == $post->post_type ) ) {
+        if ( $post && $this->is_supported_post_type( $post->post_type ) ) {
             foreach ( array_keys( $this->shortcodes->get_shortcodes() ) as $shortcode ) {
-                if ( wpbdp_has_shortcode( $post->post_content, $shortcode ) ) {
+                if ( apply_filters( 'wpbdp_has_shortcode', wpbdp_has_shortcode( $post->post_content, $shortcode ), $post, $shortcode ) ) {
                     return true;
                     break;
                 }
@@ -295,6 +295,14 @@ final class WPBDP {
 
     public function get_post_type_tags() {
         return WPBDP_TAGS_TAX;
+    }
+
+    public function get_supported_post_types() {
+        return apply_filters( 'wpbdp_supported_post_types', array( 'page', 'post' ) );
+    }
+
+    public function is_supported_post_type( $post_type ) {
+        return in_array( $post_type, $this->get_supported_post_types() );
     }
 
     /**

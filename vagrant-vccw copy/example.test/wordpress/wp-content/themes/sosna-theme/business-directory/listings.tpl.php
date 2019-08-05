@@ -1,5 +1,3 @@
-
-
 <div id="main-activity-section" class="main-activity-section">
 
  <!-- background -->

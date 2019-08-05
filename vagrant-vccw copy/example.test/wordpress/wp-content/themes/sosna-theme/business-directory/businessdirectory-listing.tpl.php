@@ -2,6 +2,7 @@
     <h2><?php echo $title; ?></h2>
 </div>
 
+
 <?php echo $is_sticky ? $sticky_tag : ''; ?>
 
 <?php if ($actions): ?>

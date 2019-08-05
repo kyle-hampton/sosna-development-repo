@@ -5,5 +5,4 @@ function add_stylesheet_to_head() {
 }
 
 add_action( 'wp_head', 'add_stylesheet_to_head' );
-
 ?>

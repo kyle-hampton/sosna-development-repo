@@ -23,8 +23,8 @@ body{
 /* main section */
 #main-border{
   flex-direction: row;
-  width: 81%;
-  height: 93%;
+  width: 100%;
+  height: 97%;
   /* border: 2px red solid; */
 }
         #searchbar-section{
@@ -143,6 +143,9 @@ body{
           .listing-details{
             padding: 1%;
           }
+          .listing-details div{
+            padding: 1%;
+          }
       .wpbdp-pagination{
         width: 30%;
         margin: 10px auto;
@@ -160,6 +163,7 @@ body{
 
         /* main wrapper for pages / homepage category */
             .main-content-wrapper{
+              overflow: scroll;
               width: 90%;
               height: 98%;
               /* border: 2px blue solid; */
@@ -191,6 +195,7 @@ body{
             }
             .business-categories{
               display: flex;
+
             }
             ul.wpbdp-categories.cf{
               position: relative;
@@ -252,8 +257,14 @@ body{
 
 
 /* sidebar */
+#sidebar-wrapper{
+  display: flex;
+
+}
+.main-container{
+  display: flex;
+}
 #side-border{
-  width: 16%;
   /* border: 2px green solid; */
 }
 
@@ -300,7 +311,7 @@ body{
         margin: 10px auto;
         padding-left: 8%;
       }
-      #page-link{
+      #page-link {
         color: color: #333333;;
       }
 
@@ -309,7 +320,7 @@ body{
   height: 15vh;
   color: #333333;
   text-decoration: underline;
-
+  margin-right: 30px;
   /* border: 2px blue solid; */
 }
 #addition-link-section{
@@ -319,9 +330,178 @@ body{
   /* border: 2px blue solid; */
 }
 
+
 .sidebar-divider{
   margin: 10px auto;
   width: 95%;
   border: 1px #333333 solid;
+
+}
+
+
+/* mapbox css */
+#map-container{
+  width: 100%;
+  /* border: 2px solid blue; */
+}
+body {
+  margin:0;
+  padding:0;
+}
+
+/* mapbox wrapper for css */
+#post-539{
+  position: relative;
+  height: -webkit-fill-available;
+}
+#map {
+  position: absolute;
+  bottom: 0;
+  padding-top: .5%;
+  width: 100%;
+  height: 100%;
+}
+#menu {
+background: #fff;
+position: absolute;
+z-index: 1;
+top: 10px;
+right: 3%;
+border-radius: 3px;
+width: 120px;
+border: 1px solid rgba(0,0,0,0.4);
+font-family: 'Open Sans', sans-serif;
+}
+
+#menu a {
+font-size: 13px;
+color: #333333;
+display: block;
+margin: 0;
+padding: 0;
+padding: 10px;
+text-decoration: none;
+border-bottom: 1px solid rgba(0,0,0,0.25);
+text-align: center;
+}
+
+#menu a:last-child {
+border: none;
+}
+
+#menu a:hover {
+background-color: #ffffff;
+color: #333333;
+}
+
+#menu a.active {
+background-color: #880800;
+color: #ffffff;
+}
+
+#menu a.active:hover {
+background: #a6a6a6;
+}
+
+.wpbdp-listing-contact-form{
+  text-align: center;
+}
+.post-header{
+  display: none;
+}
+
+/* mobile responsiveness */
+
+/* tablet */
+@media (max-width: 768px) {
+  
+  #menu {
+    margin-left: 80%;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    top: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
+}
+
+/* moblie */
+@media (max-width: 425px) {
+
+  /* sidebar mobile css  */
+  .logo{
+    width: 85%;
+    height: 40vh;
+    margin-right: 0%;
+    margin-top: 40%;
+  }
+  #directory-text{
+    font-size: 12px;
+  }
+  .text-wrapper{
+    font-size: 12px
+  }
+  #menu {
+    margin-left: 70%;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    top: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
+  }
+  #link-section{
+    margin-right: 30px;
+  }
+
+  /* searchbar mobile css */
+  #search-input{
+    font-size: 75%;
+    padding-left: 7px;
+  }
+  .search-button{
+    font-size: 100%;
+    width: 25%;
+    margin: 3.5% auto;
+  }
+
+  /* homepage  mobile css */
+  .description{
+    top: -3.5vh;
+    left: -1.5vw;
+  }
+  .description-box{
+    font-size: 60%;
+    top: -3.5vh;
+    left: -1.5vw;
+  }
+  .cat-item{
+    font-size: 13px;
+  }
+
+  .prompt{
+    font-size: 100%;
+  }
+
+  .catagory-prompt{
+    width: 100%;
+  }
+  .listing-title{
+    width: 30%;
+  }
+  .wpbdp-listing{
+    width: 100%;
+  }
+}
+
+
+
+
+
 
 }

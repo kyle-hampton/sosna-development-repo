@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mapbox-gl": "^0.52.0",
     "mongo-uri": "^0.1.2",
     "mongodb-uri": "^0.9.7",
